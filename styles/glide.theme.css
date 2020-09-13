@@ -1,0 +1,105 @@
+.glide__arrow {
+  position: absolute;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+}
+.glide__arrow:focus {
+  outline: none;
+}
+.glide__arrow--left {
+  padding: 8px 4px 8px 7px;
+  left: 310px;
+  bottom: 0;
+}
+.glide__arrow--left::after {
+  content: '';
+  margin-left: 4px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid transparent;
+  border-left-color: #BBBBBB;
+  border-bottom-color: #BBBBBB;
+  transform: rotate(45deg);
+}
+.glide__arrow--right {
+  padding: 8px 7px 8px 4px;
+  right: 310px;
+  bottom: 0;
+}
+.glide__arrow--right::after {
+  content: '';
+  margin-right: 4px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid transparent;
+  border-right-color: #BBBBBB;
+  border-top-color: #BBBBBB;
+  transform: rotate(45deg);
+}
+.glide__arrow:hover {
+  border-color: #18CFAB;
+  background-color: #18CFAB;
+}
+.glide__arrow--right:hover::after {
+  border-right-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+}
+.glide__arrow--left:hover::after {
+  border-left-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+
+.glide__bullets {
+  margin-top: 60px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.glide__bullet {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 8px rgb(31 218 181 / 0.2);
+  margin: 0 15px;
+}
+
+.glide__bullet:focus {
+  outline: none;
+}
+.glide__bullet:hover, .glide__bullet:focus {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.glide__bullet--active {
+  transform: translateY(-10px);
+}
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
